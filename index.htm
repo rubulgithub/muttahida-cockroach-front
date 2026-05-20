@@ -1,0 +1,2448 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muttahida Cockroach Front | Muslim Empowerment. Indian Pride.</title>
+    <meta
+      name="description"
+      content="Indian Muslims formally joining the Cockroach Janta Party. Not vote-banks. Citizens. Demanding constitutional rights, education, and dignity."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --saffron: #ff6b00;
+        --saffron-light: #ff9933;
+        --green: #1a5c38;
+        --green-light: #2a8050;
+        --navy: #000080;
+        --cream: #ede8dc;
+        --white-off: #f5f0e8;
+        --dark: #0d0d0d;
+        --ink: #1a1a1a;
+        --mid: #555;
+        --muted: #888;
+        --roach: #3d2b1f;
+        --gold: #c9a84c;
+        --rust: #c24a00;
+        --border: rgba(26, 26, 26, 0.14);
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--cream);
+        color: var(--ink);
+        font-family: "Space Mono", monospace;
+        overflow-x: hidden;
+        font-size: 14px;
+      }
+
+      /* ══ TICKER ══ */
+      .ticker {
+        background: var(--dark);
+        color: var(--saffron);
+        font-size: 11px;
+        letter-spacing: 0.13em;
+        padding: 8px 0;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .ticker-track {
+        display: inline-flex;
+        animation: ticker-scroll 45s linear infinite;
+      }
+      .ticker-track span {
+        padding: 0 36px;
+      }
+      .ticker-track span::before {
+        content: "✦ ";
+        color: var(--green-light);
+      }
+      @keyframes ticker-scroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* ══ NAV ══ */
+      nav {
+        background: var(--cream);
+        border-bottom: 2.5px solid var(--dark);
+        padding: 0 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 72px;
+        position: sticky;
+        top: 0;
+        z-index: 200;
+      }
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        text-decoration: none;
+      }
+      .nav-emblem {
+        width: 48px;
+        height: 48px;
+        position: relative;
+        flex-shrink: 0;
+      }
+      .nav-emblem svg {
+        width: 100%;
+        height: 100%;
+      }
+      .nav-wordmark {
+        line-height: 1.15;
+      }
+      .nav-wordmark strong {
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        color: var(--dark);
+        text-transform: uppercase;
+      }
+      .nav-wordmark span {
+        font-size: 10px;
+        color: var(--green);
+        letter-spacing: 0.08em;
+      }
+      .nav-links {
+        display: flex;
+        gap: 28px;
+        list-style: none;
+      }
+      .nav-links a {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--ink);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: var(--saffron);
+      }
+      .nav-cta {
+        background: var(--dark);
+        color: var(--saffron) !important;
+        padding: 10px 22px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: 2px solid var(--dark);
+        transition: all 0.2s;
+        font-family: "Space Mono", monospace;
+      }
+      .nav-cta:hover {
+        background: var(--saffron);
+        color: var(--dark) !important;
+        border-color: var(--saffron);
+      }
+
+      /* ══ HERO ══ */
+      .hero {
+        min-height: 94vh;
+        display: grid;
+        grid-template-columns: 1fr 440px;
+        align-items: center;
+        padding: 64px 48px;
+        gap: 48px;
+        background: var(--cream);
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 52%;
+        height: 100%;
+        background: repeating-linear-gradient(
+          -45deg,
+          transparent,
+          transparent 22px,
+          rgba(26, 92, 56, 0.035) 22px,
+          rgba(26, 92, 56, 0.035) 23px
+        );
+        pointer-events: none;
+      }
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        border: 1.5px solid var(--dark);
+        border-radius: 100px;
+        padding: 6px 16px;
+        font-size: 10px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 28px;
+      }
+      .hero-badge .dot {
+        width: 8px;
+        height: 8px;
+        background: var(--saffron);
+        border-radius: 50%;
+        animation: pulse 1.6s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.6);
+          opacity: 0.5;
+        }
+      }
+      .hero-hl {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(54px, 6.5vw, 96px);
+        line-height: 0.97;
+        font-weight: 900;
+        margin-bottom: 32px;
+        letter-spacing: -0.025em;
+      }
+      .hero-hl .l1 {
+        color: var(--dark);
+        display: block;
+      }
+      .hero-hl .l2 {
+        color: var(--saffron);
+        display: block;
+        font-style: italic;
+      }
+      .hero-hl .l3 {
+        color: var(--green);
+        display: block;
+      }
+      .hero-urdu {
+        font-family: "Noto Nastaliq Urdu", serif;
+        font-size: 20px;
+        color: var(--mid);
+        direction: rtl;
+        line-height: 2.2;
+        margin-bottom: 24px;
+      }
+      .hero-sub {
+        font-size: 14px;
+        line-height: 1.85;
+        color: var(--mid);
+        max-width: 480px;
+        margin-bottom: 40px;
+      }
+      .hero-btns {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 48px;
+      }
+      .btn-p {
+        background: var(--dark);
+        color: var(--saffron-light);
+        border: 2px solid var(--dark);
+        padding: 14px 30px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: "Space Mono", monospace;
+        transition: all 0.2s;
+        box-shadow: 4px 4px 0 var(--green);
+        cursor: pointer;
+        display: inline-block;
+      }
+      .btn-p:hover {
+        background: var(--saffron);
+        color: var(--dark);
+        border-color: var(--saffron);
+        box-shadow: 2px 2px 0 var(--green);
+        transform: translate(2px, 2px);
+      }
+      .btn-s {
+        background: transparent;
+        color: var(--dark);
+        border: 2px solid var(--dark);
+        padding: 14px 30px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: "Space Mono", monospace;
+        transition: all 0.2s;
+        box-shadow: 4px 4px 0 var(--saffron-light);
+        display: inline-block;
+      }
+      .btn-s:hover {
+        background: var(--dark);
+        color: var(--cream);
+        box-shadow: 2px 2px 0 var(--saffron-light);
+        transform: translate(2px, 2px);
+      }
+      .hero-stats {
+        display: flex;
+        gap: 44px;
+      }
+      .stat-num {
+        font-family: "Playfair Display", serif;
+        font-size: 38px;
+        font-weight: 900;
+        color: var(--dark);
+        display: block;
+        line-height: 1;
+      }
+      .stat-lbl {
+        font-size: 9px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-top: 4px;
+        display: block;
+      }
+
+      /* Poster */
+      .hero-poster {
+        background: var(--dark);
+        border: 3px solid var(--dark);
+        position: relative;
+        overflow: hidden;
+        animation: float 5s ease-in-out infinite;
+        box-shadow: 10px 10px 0 var(--saffron);
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) rotate(0.4deg);
+        }
+        50% {
+          transform: translateY(-14px) rotate(-0.4deg);
+        }
+      }
+      .poster-flag {
+        display: flex;
+        height: 10px;
+      }
+      .poster-flag span {
+        flex: 1;
+      }
+      .poster-flag .pf1 {
+        background: var(--saffron);
+      }
+      .poster-flag .pf2 {
+        background: var(--white-off);
+        border-top: 1px solid #bbb;
+        border-bottom: 1px solid #bbb;
+      }
+      .poster-flag .pf3 {
+        background: var(--green);
+      }
+      .poster-inner {
+        padding: 28px 24px;
+      }
+      .poster-stamp {
+        background: var(--saffron);
+        color: var(--dark);
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        padding: 4px 10px;
+        display: inline-block;
+        transform: rotate(-3deg);
+        margin-bottom: 18px;
+      }
+      .poster-roach-wrap {
+        display: flex;
+        justify-content: center;
+        padding: 12px 0 20px;
+      }
+      .poster-title {
+        font-family: "Playfair Display", serif;
+        font-size: 30px;
+        font-weight: 900;
+        color: var(--white-off);
+        line-height: 1.05;
+        margin-bottom: 8px;
+      }
+      .poster-title em {
+        color: var(--saffron);
+        font-style: italic;
+      }
+      .poster-sub {
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        color: #888;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+      .poster-stats-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        border-top: 1px solid #222;
+        padding-top: 16px;
+        margin-bottom: 16px;
+      }
+      .ps-num {
+        font-family: "Playfair Display", serif;
+        font-size: 24px;
+        font-weight: 900;
+        color: var(--saffron);
+        display: block;
+        line-height: 1;
+      }
+      .ps-lbl {
+        font-size: 9px;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+      .poster-tags {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+      .ptag {
+        border: 1px solid;
+        font-size: 9px;
+        letter-spacing: 0.09em;
+        padding: 3px 8px;
+        font-weight: 700;
+      }
+      .ptag.s {
+        border-color: var(--saffron);
+        color: var(--saffron);
+      }
+      .ptag.g {
+        border-color: var(--green-light);
+        color: var(--green-light);
+      }
+      .ptag.w {
+        border-color: #aaa;
+        color: #aaa;
+      }
+
+      /* ══ SECTION BASE ══ */
+      section {
+        padding: 88px 48px;
+      }
+      .sec-label {
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--saffron);
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .sec-label::before {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 2.5px;
+        background: var(--saffron);
+      }
+      .sec-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(34px, 4vw, 62px);
+        font-weight: 900;
+        line-height: 1.04;
+        letter-spacing: -0.025em;
+        margin-bottom: 20px;
+      }
+
+      /* ══ MARQUEE DIVIDER ══ */
+      .marquee-band {
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 14px 0;
+      }
+      .marquee-band.saffron {
+        background: var(--saffron);
+      }
+      .marquee-band.dark {
+        background: var(--dark);
+      }
+      .mq-track {
+        display: inline-flex;
+        animation: ticker-scroll 28s linear infinite;
+      }
+      .mq-track.rev {
+        animation-direction: reverse;
+      }
+      .mq-track span {
+        padding: 0 28px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .marquee-band.saffron .mq-track span {
+        color: var(--dark);
+      }
+      .marquee-band.saffron .mq-track span::after {
+        content: " 🪳";
+      }
+      .marquee-band.dark .mq-track span {
+        color: var(--saffron);
+      }
+      .marquee-band.dark .mq-track span::after {
+        content: " ✦";
+        color: var(--green-light);
+      }
+
+      /* ══ WHY SECTION ══ */
+      .why-sec {
+        background: var(--dark);
+        color: var(--white-off);
+      }
+      .why-sec .sec-label {
+        color: var(--saffron-light);
+      }
+      .why-sec .sec-label::before {
+        background: var(--saffron-light);
+      }
+      .why-sec .sec-title {
+        color: var(--white-off);
+      }
+      .why-intro {
+        font-size: 14px;
+        line-height: 1.85;
+        color: #aaa;
+        max-width: 600px;
+        margin-bottom: 56px;
+      }
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px;
+      }
+      .why-card {
+        background: #111;
+        border: 1px solid #202020;
+        padding: 36px 28px;
+        position: relative;
+        overflow: hidden;
+        transition:
+          border-color 0.25s,
+          background 0.25s;
+        cursor: default;
+      }
+      .why-card:hover {
+        border-color: var(--saffron);
+        background: #161616;
+      }
+      .why-card::before {
+        content: attr(data-n);
+        position: absolute;
+        top: 12px;
+        right: 18px;
+        font-family: "Playfair Display", serif;
+        font-size: 88px;
+        font-weight: 900;
+        color: #1c1c1c;
+        line-height: 1;
+        pointer-events: none;
+      }
+      .why-icon {
+        font-size: 34px;
+        margin-bottom: 20px;
+        position: relative;
+      }
+      .why-title {
+        font-family: "Playfair Display", serif;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: var(--white-off);
+      }
+      .why-title em {
+        color: var(--saffron);
+        font-style: normal;
+      }
+      .why-body {
+        font-size: 12px;
+        line-height: 1.85;
+        color: #999;
+      }
+
+      /* ══ MANIFESTO ══ */
+      .manifesto-sec {
+        background: var(--cream);
+      }
+      .manifesto-lead {
+        font-size: 15px;
+        line-height: 1.85;
+        color: var(--mid);
+        max-width: 580px;
+        margin-bottom: 60px;
+      }
+      .m-item {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        border-top: 1px solid #ccc;
+        padding: 36px 0;
+        gap: 32px;
+        align-items: start;
+        transition:
+          padding-left 0.2s,
+          background 0.2s;
+        cursor: default;
+      }
+      .m-item:last-child {
+        border-bottom: 1px solid #ccc;
+      }
+      .m-item:hover {
+        padding-left: 16px;
+      }
+      .m-item:hover .m-num {
+        color: var(--saffron);
+      }
+      .m-num {
+        font-family: "Playfair Display", serif;
+        font-size: 44px;
+        font-weight: 900;
+        color: #ddd;
+        line-height: 1;
+        transition: color 0.2s;
+      }
+      .m-tag {
+        font-size: 9px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 3px 9px;
+        margin-bottom: 10px;
+        display: inline-block;
+      }
+      .m-tag.red {
+        background: #c0392b;
+        color: white;
+      }
+      .m-tag.orange {
+        background: var(--saffron);
+        color: var(--dark);
+      }
+      .m-tag.green {
+        background: var(--green);
+        color: white;
+      }
+      .m-tag.blue {
+        background: #1a3a6c;
+        color: white;
+      }
+      .m-tag.gold {
+        background: var(--gold);
+        color: var(--dark);
+      }
+      .m-tag.purple {
+        background: #5b2c8d;
+        color: white;
+      }
+      .m-title-row {
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+      }
+      .m-title {
+        font-family: "Playfair Display", serif;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+      .m-article {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        color: var(--green);
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      .m-body {
+        font-size: 12px;
+        line-height: 1.9;
+        color: var(--mid);
+        max-width: 640px;
+      }
+
+      /* ══ VOTEBANK QUOTE ══ */
+      .votebank-sec {
+        background: var(--green);
+        color: var(--white-off);
+        text-align: center;
+      }
+      .votebank-sec .sec-label {
+        justify-content: center;
+        color: var(--saffron-light);
+      }
+      .votebank-sec .sec-label::before {
+        background: var(--saffron-light);
+      }
+      .votebank-sec .sec-title {
+        color: var(--white-off);
+      }
+      .vb-quote {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(26px, 3.5vw, 50px);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.3;
+        max-width: 800px;
+        margin: 36px auto 40px;
+        color: var(--white-off);
+      }
+      .vb-quote em {
+        color: var(--saffron-light);
+        font-style: normal;
+      }
+      .vb-body {
+        font-size: 14px;
+        line-height: 1.9;
+        color: rgba(245, 240, 232, 0.7);
+        max-width: 640px;
+        margin: 0 auto 40px;
+      }
+      .vb-pills {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .pill {
+        border: 1.5px solid rgba(245, 240, 232, 0.3);
+        color: var(--white-off);
+        padding: 8px 20px;
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 700;
+        background: rgba(255, 255, 255, 0.05);
+        transition:
+          background 0.2s,
+          border-color 0.2s;
+      }
+      .pill:hover {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(245, 240, 232, 0.6);
+      }
+
+      /* ══ EXPOSE SECTION ══ */
+      .expose-sec {
+        background: var(--dark);
+        color: var(--white-off);
+      }
+      .expose-sec .sec-label {
+        color: var(--saffron-light);
+      }
+      .expose-sec .sec-label::before {
+        background: var(--saffron-light);
+      }
+      .expose-sec .sec-title {
+        color: var(--white-off);
+      }
+      .expose-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2px;
+        margin-top: 48px;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .expose-card {
+        background: var(--dark);
+        padding: 36px 32px;
+        transition: background 0.2s;
+      }
+      .expose-card:hover {
+        background: #141414;
+      }
+      .expose-card h4 {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--saffron-light);
+        margin-bottom: 12px;
+      }
+      .expose-card p {
+        font-size: 12px;
+        line-height: 1.9;
+        color: #999;
+      }
+
+      /* ══ CJP SOLIDARITY ══ */
+      .cjp-sec {
+        background: var(--ink);
+        color: var(--white-off);
+        text-align: center;
+      }
+      .cjp-sec .sec-label {
+        justify-content: center;
+        color: var(--saffron-light);
+      }
+      .cjp-sec .sec-label::before {
+        background: var(--saffron-light);
+      }
+      .cjp-roaches {
+        font-size: 52px;
+        letter-spacing: 0.04em;
+        margin: 36px 0;
+        display: block;
+      }
+      .cjp-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(32px, 4.5vw, 62px);
+        font-weight: 900;
+        line-height: 1.08;
+        margin-bottom: 28px;
+        color: var(--white-off);
+      }
+      .cjp-title em {
+        color: var(--saffron-light);
+        font-style: italic;
+      }
+      .cjp-body {
+        font-size: 14px;
+        line-height: 1.95;
+        color: #bbb;
+        max-width: 640px;
+        margin: 0 auto 40px;
+      }
+      .cjp-declaration {
+        display: inline-block;
+        background: var(--saffron);
+        color: var(--dark);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        padding: 16px 40px;
+        margin-bottom: 20px;
+      }
+      .cjp-link {
+        font-size: 11px;
+        color: var(--saffron-light);
+        text-decoration: none;
+        letter-spacing: 0.1em;
+      }
+      .cjp-link:hover {
+        text-decoration: underline;
+      }
+
+      /* ══ CAP SECTION ══ */
+      .cap-sec {
+        background: var(--saffron);
+      }
+      .cap-sec .sec-label {
+        color: var(--dark);
+      }
+      .cap-sec .sec-label::before {
+        background: var(--dark);
+      }
+      .cap-sec .sec-title {
+        color: var(--dark);
+      }
+      .cap-layout {
+        margin-top: 56px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        align-items: center;
+      }
+      .cap-visual {
+        background: var(--dark);
+        padding: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 10px 10px 0 var(--green);
+      }
+      .cap-desc {
+        font-size: 14px;
+        line-height: 1.9;
+        color: rgba(13, 13, 13, 0.72);
+        margin-bottom: 32px;
+      }
+      .cap-features {
+        list-style: none;
+      }
+      .cap-features li {
+        padding: 13px 0;
+        border-bottom: 1px solid rgba(13, 13, 13, 0.15);
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--dark);
+      }
+      .cap-features li::before {
+        content: "✓";
+        color: var(--green);
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      /* ══ ELIGIBILITY ══ */
+      .elig-sec {
+        background: var(--cream);
+      }
+      .req-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px;
+        margin-top: 48px;
+      }
+      .req-card {
+        background: white;
+        border: 1.5px solid #d0cbbe;
+        padding: 36px 28px;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+        position: relative;
+      }
+      .req-card:hover {
+        border-color: var(--green);
+        box-shadow: 5px 5px 0 var(--green);
+      }
+      .req-check {
+        width: 28px;
+        height: 28px;
+        background: var(--green);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 13px;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+      .req-num {
+        font-size: 10px;
+        letter-spacing: 0.15em;
+        color: var(--saffron);
+        font-weight: 700;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+      }
+      .req-title {
+        font-family: "Playfair Display", serif;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .req-body {
+        font-size: 12px;
+        line-height: 1.75;
+        color: #666;
+      }
+      .elig-note {
+        margin-top: 28px;
+        font-size: 11px;
+        color: var(--muted);
+        letter-spacing: 0.08em;
+      }
+
+      /* ══ JOIN SECTION ══ */
+      .join-sec {
+        background: var(--saffron);
+      }
+      .join-sec .sec-label {
+        color: var(--dark);
+      }
+      .join-sec .sec-label::before {
+        background: var(--dark);
+      }
+      .join-sec .sec-title {
+        color: var(--dark);
+      }
+      .join-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        align-items: start;
+      }
+      .join-body {
+        font-size: 14px;
+        line-height: 1.85;
+        color: rgba(13, 13, 13, 0.72);
+        margin-bottom: 28px;
+      }
+      .join-pledge {
+        background: var(--dark);
+        padding: 20px 24px;
+        font-size: 12px;
+        font-style: italic;
+        line-height: 1.9;
+        color: #ccc;
+        border-left: 4px solid var(--saffron);
+        margin-bottom: 32px;
+      }
+      .join-alliance {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        background: var(--dark);
+        padding: 14px 20px;
+      }
+      .join-alliance span {
+        font-size: 32px;
+      }
+      .join-alliance-txt strong {
+        display: block;
+        font-family: "Playfair Display", serif;
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--saffron);
+      }
+      .join-alliance-txt small {
+        font-size: 10px;
+        color: #888;
+        letter-spacing: 0.1em;
+      }
+      /* form */
+      .join-box {
+        background: var(--dark);
+        padding: 40px;
+      }
+      .join-box-title {
+        font-family: "Playfair Display", serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--saffron);
+        margin-bottom: 4px;
+      }
+      .join-box-sub {
+        font-size: 10px;
+        color: #888;
+        letter-spacing: 0.1em;
+        margin-bottom: 28px;
+      }
+      .fg {
+        margin-bottom: 18px;
+      }
+      .fg label {
+        display: block;
+        font-size: 9px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #888;
+        margin-bottom: 6px;
+      }
+      .fg input,
+      .fg select,
+      .fg textarea {
+        width: 100%;
+        background: #1a1a1a;
+        border: 1px solid #2e2e2e;
+        color: var(--white-off);
+        padding: 12px 14px;
+        font-family: "Space Mono", monospace;
+        font-size: 12px;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+      .fg input:focus,
+      .fg select:focus,
+      .fg textarea:focus {
+        border-color: var(--saffron);
+      }
+      .fg select option {
+        background: #1a1a1a;
+      }
+      .fg textarea {
+        height: 80px;
+        resize: vertical;
+      }
+      .chk-row {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+      .chk-row input[type="checkbox"] {
+        margin-top: 3px;
+        accent-color: var(--saffron);
+      }
+      .chk-row label {
+        font-size: 11px;
+        color: #bbb;
+        line-height: 1.6;
+        letter-spacing: 0;
+        text-transform: none;
+      }
+      .submit-btn {
+        width: 100%;
+        background: var(--saffron);
+        color: var(--dark);
+        border: none;
+        padding: 18px;
+        font-family: "Space Mono", monospace;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.2s;
+        box-shadow: 4px 4px 0 var(--green);
+      }
+      .submit-btn:hover {
+        background: var(--white-off);
+        box-shadow: 2px 2px 0 var(--green);
+        transform: translate(2px, 2px);
+      }
+      .success-msg {
+        display: none;
+        background: var(--green);
+        color: white;
+        padding: 16px;
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        margin-top: 12px;
+        line-height: 1.7;
+      }
+
+      /* ══ FOOTER ══ */
+      footer {
+        background: var(--dark);
+        color: var(--white-off);
+        padding: 64px 48px 32px;
+        border-top: 3.5px solid var(--saffron);
+      }
+      .footer-top {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 44px;
+        padding-bottom: 48px;
+        border-bottom: 1px solid #1e1e1e;
+      }
+      .fb-name {
+        font-family: "Playfair Display", serif;
+        font-size: 22px;
+        font-weight: 900;
+        color: var(--saffron);
+        margin-bottom: 4px;
+      }
+      .fb-sub {
+        font-size: 11px;
+        color: var(--green-light);
+        letter-spacing: 0.1em;
+        margin-bottom: 16px;
+      }
+      .fb-body {
+        font-size: 12px;
+        color: #888;
+        line-height: 1.8;
+        max-width: 280px;
+      }
+      .fb-urdu {
+        font-family: "Noto Nastaliq Urdu", serif;
+        font-size: 16px;
+        color: #666;
+        direction: rtl;
+        line-height: 2.2;
+        margin-top: 12px;
+      }
+      .footer-flag {
+        display: flex;
+        height: 16px;
+        width: 50px;
+        overflow: hidden;
+        border-radius: 2px;
+        margin-top: 20px;
+      }
+      .footer-flag span {
+        flex: 1;
+      }
+      .footer-flag .ff1 {
+        background: var(--saffron);
+      }
+      .footer-flag .ff2 {
+        background: var(--white-off);
+        border-top: 1px solid #bbb;
+        border-bottom: 1px solid #bbb;
+      }
+      .footer-flag .ff3 {
+        background: var(--green);
+      }
+      .fc-title {
+        font-size: 10px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--saffron);
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+      .footer-links {
+        list-style: none;
+      }
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+      .footer-links a {
+        font-size: 12px;
+        color: #888;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .footer-links a:hover {
+        color: var(--white-off);
+      }
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 28px;
+        font-size: 11px;
+        color: #444;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      /* ══ SCROLL REVEAL ══ */
+      .r {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.65s ease,
+          transform 0.65s ease;
+      }
+      .r.v {
+        opacity: 1;
+        transform: none;
+      }
+      .r2 {
+        transition-delay: 0.1s;
+      }
+      .r3 {
+        transition-delay: 0.2s;
+      }
+      .r4 {
+        transition-delay: 0.3s;
+      }
+
+      /* ══ RESPONSIVE ══ */
+      @media (max-width: 940px) {
+        .hero {
+          grid-template-columns: 1fr;
+          padding: 48px 20px;
+        }
+        .hero-poster {
+          display: none;
+        }
+        nav {
+          padding: 0 20px;
+        }
+        .nav-links {
+          display: none;
+        }
+        section {
+          padding: 64px 20px;
+        }
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+        .expose-grid {
+          grid-template-columns: 1fr;
+        }
+        .cap-layout {
+          grid-template-columns: 1fr;
+        }
+        .req-grid {
+          grid-template-columns: 1fr;
+        }
+        .join-layout {
+          grid-template-columns: 1fr;
+        }
+        .footer-top {
+          grid-template-columns: 1fr 1fr;
+          gap: 28px;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- TICKER -->
+    <div class="ticker">
+      <div class="ticker-track">
+        <span>MUTTAHIDA COCKROACH FRONT</span><span>मुत्तहिदा कॉकरोच फ्रंट</span
+        ><span>WE ARE NOT A VOTE BANK</span
+        ><span>CONSTITUTIONALLY INDIAN · UNAPOLOGETICALLY MUSLIM</span
+        ><span>NO APPEASEMENT · NO EXPLOITATION</span
+        ><span>PROUDLY JOINING CJP · EST. 2026</span
+        ><span>WHEREVER THE WIFI WORKS</span
+        ><span>MUTTAHIDA COCKROACH FRONT</span
+        ><span>मुत्तहिदा कॉकरोच फ्रंट</span><span>WE ARE NOT A VOTE BANK</span
+        ><span>CONSTITUTIONALLY INDIAN · UNAPOLOGETICALLY MUSLIM</span
+        ><span>NO APPEASEMENT · NO EXPLOITATION</span
+        ><span>PROUDLY JOINING CJP · EST. 2026</span
+        ><span>WHEREVER THE WIFI WORKS</span>
+      </div>
+    </div>
+
+    <!-- NAV -->
+    <nav>
+      <a class="nav-logo" href="#">
+        <div class="nav-emblem">
+          <svg
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="24"
+              cy="24"
+              r="22"
+              fill="#0D0D0D"
+              stroke="#FF6B00"
+              stroke-width="2"
+            />
+            <!-- cockroach body -->
+            <ellipse cx="24" cy="28" rx="7" ry="9" fill="#5C3D28" />
+            <!-- head -->
+            <ellipse cx="24" cy="20" rx="5" ry="4" fill="#6B4830" />
+            <!-- antennae -->
+            <line
+              x1="21"
+              y1="17"
+              x2="14"
+              y2="11"
+              stroke="#5C3D28"
+              stroke-width="1.2"
+            />
+            <line
+              x1="27"
+              y1="17"
+              x2="34"
+              y2="11"
+              stroke="#5C3D28"
+              stroke-width="1.2"
+            />
+            <!-- legs -->
+            <line
+              x1="17.5"
+              y1="25"
+              x2="11"
+              y2="21"
+              stroke="#5C3D28"
+              stroke-width="1"
+            />
+            <line
+              x1="17.5"
+              y1="29"
+              x2="10"
+              y2="28"
+              stroke="#5C3D28"
+              stroke-width="1"
+            />
+            <line
+              x1="17.5"
+              y1="33"
+              x2="11"
+              y2="37"
+              stroke="#5C3D28"
+              stroke-width="1"
+            />
+            <line
+              x1="30.5"
+              y1="25"
+              x2="37"
+              y2="21"
+              stroke="#5C3D28"
+              stroke-width="1"
+            />
+            <line
+              x1="30.5"
+              y1="29"
+              x2="38"
+              y2="28"
+              stroke="#5C3D28"
+              stroke-width="1"
+            />
+            <line
+              x1="30.5"
+              y1="33"
+              x2="37"
+              y2="37"
+              stroke="#5C3D28"
+              stroke-width="1"
+            />
+            <!-- cap on head -->
+            <ellipse cx="24" cy="18.5" rx="5.5" ry="2.5" fill="white" />
+            <path d="M19 18.5 Q19 14 24 13.5 Q29 14 29 18.5 Z" fill="white" />
+            <!-- tricolor on cap -->
+            <path
+              d="M19.5 18 Q19.5 16.5 24 16.2 Q28.5 16.5 28.5 18"
+              stroke="#FF6B00"
+              stroke-width=".9"
+              fill="none"
+            />
+            <path
+              d="M19.5 19 Q19.5 17.5 24 17.2 Q28.5 17.5 28.5 19"
+              stroke="#1A5C38"
+              stroke-width=".7"
+              fill="none"
+            />
+            <!-- crescent on cap -->
+            <text
+              x="24"
+              y="16.5"
+              text-anchor="middle"
+              fill="#000080"
+              font-size="4"
+            >
+              ☽
+            </text>
+            <!-- tricolor ring outer -->
+            <circle
+              cx="24"
+              cy="24"
+              r="22"
+              fill="none"
+              stroke="#FF6B00"
+              stroke-width="2.5"
+              stroke-dasharray="22 3"
+              stroke-dashoffset="0"
+            />
+          </svg>
+        </div>
+        <div class="nav-wordmark">
+          <strong>Muttahida Cockroach Front</strong>
+          <span>मुत्तहिदा कॉकरोच फ्रंट · Est. 2026</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#why">Why</a></li>
+        <li><a href="#manifesto">Manifesto</a></li>
+        <li><a href="#cjp">CJP Alliance</a></li>
+        <li><a href="#eligibility">Eligibility</a></li>
+        <li><a href="#join">Join</a></li>
+      </ul>
+      <a href="#join" class="nav-cta">Join the Front →</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div>
+        <div class="hero-badge r">
+          <span class="dot"></span>Muslim Empowerment Movement · Live 2026
+        </div>
+        <h1 class="hero-hl r r2">
+          <span class="l1">Not Your</span>
+          <span class="l2">Vote Bank.</span>
+          <span class="l3">Anymore.</span>
+        </h1>
+        <p class="hero-urdu r r3">ہم ووٹ بینک نہیں ہیں — ہم شہری ہیں</p>
+        <p class="hero-sub r r3">
+          A movement for Indian Muslims who are tired of being counted every
+          five years and forgotten for four. We demand rights — not favors.
+          Education — not exploitation. Dignity — not political gundagiri.
+        </p>
+        <div class="hero-btns r r4">
+          <a href="#join" class="btn-p">Join the Front →</a>
+          <a href="#manifesto" class="btn-s">Read the Manifesto</a>
+        </div>
+        <div class="hero-stats r r4">
+          <div>
+            <span class="stat-num">0</span
+            ><span class="stat-lbl">Corporate Donors</span>
+          </div>
+          <div>
+            <span class="stat-num">8</span
+            ><span class="stat-lbl">Core Demands</span>
+          </div>
+          <div>
+            <span class="stat-num">20cr+</span
+            ><span class="stat-lbl">Indian Muslims</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-poster r r3">
+        <div class="poster-flag">
+          <span class="pf1"></span><span class="pf2"></span
+          ><span class="pf3"></span>
+        </div>
+        <div class="poster-inner">
+          <div class="poster-stamp">OFFICIAL POSTER · NO. 001</div>
+          <div class="poster-roach-wrap">
+            <!-- Hand-crafted cockroach with taqiyah SVG -->
+            <svg
+              width="130"
+              height="120"
+              viewBox="0 0 130 120"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <!-- body -->
+              <ellipse cx="65" cy="80" rx="22" ry="28" fill="#5C3D28" />
+              <!-- head -->
+              <ellipse cx="65" cy="54" rx="16" ry="13" fill="#6B4830" />
+              <!-- antennae -->
+              <line
+                x1="57"
+                y1="44"
+                x2="32"
+                y2="22"
+                stroke="#5C3D28"
+                stroke-width="2"
+              />
+              <line
+                x1="73"
+                y1="44"
+                x2="98"
+                y2="22"
+                stroke="#5C3D28"
+                stroke-width="2"
+              />
+              <circle cx="32" cy="22" r="2" fill="#5C3D28" />
+              <circle cx="98" cy="22" r="2" fill="#5C3D28" />
+              <!-- legs L -->
+              <line
+                x1="45"
+                y1="70"
+                x2="22"
+                y2="58"
+                stroke="#5C3D28"
+                stroke-width="1.8"
+              />
+              <line
+                x1="45"
+                y1="80"
+                x2="18"
+                y2="78"
+                stroke="#5C3D28"
+                stroke-width="1.8"
+              />
+              <line
+                x1="45"
+                y1="90"
+                x2="22"
+                y2="102"
+                stroke="#5C3D28"
+                stroke-width="1.8"
+              />
+              <!-- legs R -->
+              <line
+                x1="85"
+                y1="70"
+                x2="108"
+                y2="58"
+                stroke="#5C3D28"
+                stroke-width="1.8"
+              />
+              <line
+                x1="85"
+                y1="80"
+                x2="112"
+                y2="78"
+                stroke="#5C3D28"
+                stroke-width="1.8"
+              />
+              <line
+                x1="85"
+                y1="90"
+                x2="108"
+                y2="102"
+                stroke="#5C3D28"
+                stroke-width="1.8"
+              />
+              <!-- taqiyah (Muslim cap) on head -->
+              <ellipse cx="65" cy="48" rx="17" ry="6" fill="#F5F0E8" />
+              <path d="M49 48 Q49 34 65 32 Q81 34 81 48 Z" fill="#F5F0E8" />
+              <!-- tricolor band on cap -->
+              <path
+                d="M50 46 Q50 42 65 41 Q80 42 80 46"
+                stroke="#FF6B00"
+                stroke-width="2"
+                fill="none"
+                stroke-linecap="round"
+              />
+              <path
+                d="M50 48.5 Q50 44.5 65 43.5 Q80 44.5 80 48.5"
+                stroke="#1A5C38"
+                stroke-width="1.5"
+                fill="none"
+                stroke-linecap="round"
+              />
+              <!-- crescent on cap -->
+              <text
+                x="65"
+                y="42"
+                text-anchor="middle"
+                fill="#000080"
+                font-size="9"
+                font-family="serif"
+              >
+                ☽★
+              </text>
+              <!-- cap seam details -->
+              <path
+                d="M58 38 Q65 35 72 38"
+                stroke="#ddd"
+                stroke-width=".8"
+                stroke-dasharray="2,3"
+                fill="none"
+              />
+              <path
+                d="M54 43 Q65 40 76 43"
+                stroke="#ddd"
+                stroke-width=".8"
+                stroke-dasharray="2,3"
+                fill="none"
+              />
+            </svg>
+          </div>
+          <div class="poster-title">
+            <em>Muttahida</em><br />Cockroach Front
+          </div>
+          <div class="poster-sub">मुत्तहिदा कॉकरोच फ्रंट · India · 2026</div>
+          <div class="poster-stats-row">
+            <div>
+              <span class="ps-num">0</span><span class="ps-lbl">Donors</span>
+            </div>
+            <div>
+              <span class="ps-num">8</span><span class="ps-lbl">Demands</span>
+            </div>
+            <div>
+              <span class="ps-num">∞</span><span class="ps-lbl">Patience</span>
+            </div>
+          </div>
+          <div class="poster-tags">
+            <span class="ptag s">UNITY</span>
+            <span class="ptag g">RIGHTS</span>
+            <span class="ptag w">INDIA FIRST</span>
+            <span class="ptag s">NO VOTE BANK</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE 1 -->
+    <div class="marquee-band saffron">
+      <div class="mq-track">
+        <span>MUSLIM EMPOWERMENT</span><span>CONSTITUTIONAL RIGHTS</span
+        ><span>NO VOTE BANK POLITICS</span
+        ><span>EDUCATION OVER APPEASEMENT</span
+        ><span>FREE POLITICAL PRISONERS</span><span>ANTI-GUNDAGIRI</span
+        ><span>INDIA FIRST</span><span>MUSLIM EMPOWERMENT</span
+        ><span>CONSTITUTIONAL RIGHTS</span><span>NO VOTE BANK POLITICS</span
+        ><span>EDUCATION OVER APPEASEMENT</span
+        ><span>FREE POLITICAL PRISONERS</span><span>ANTI-GUNDAGIRI</span
+        ><span>INDIA FIRST</span>
+      </div>
+    </div>
+
+    <!-- WHY -->
+    <section class="why-sec" id="why">
+      <div class="sec-label r">Why This Movement Exists</div>
+      <h2 class="sec-title r">The Three<br />Betrayals.</h2>
+      <p class="why-intro r">
+        We were betrayed by our opponents who demonised us. We were betrayed by
+        our so-called protectors who used us. We were betrayed by our own
+        leaders who sold us. This movement starts by naming all three, loudly.
+      </p>
+      <div class="why-grid">
+        <div class="why-card r" data-n="01">
+          <div class="why-icon">🗳️</div>
+          <div class="why-title">The <em>Vote Bank</em> Trap</div>
+          <div class="why-body">
+            Every election cycle, "secular" parties arrive with fear, biryani,
+            and promises. Every five years, we deliver votes. Every six years,
+            we wait. Masjids get funded. Colleges don't. Madrasas get subsidies.
+            Skill centres don't. The deal is not development — it is dependence.
+            The Sachar Committee documented it in 2006. Nothing changed.
+          </div>
+        </div>
+        <div class="why-card r r2" data-n="02">
+          <div class="why-icon">🤝</div>
+          <div class="why-title">Our Own <em>Political Gundas</em></div>
+          <div class="why-body">
+            Muslim leaders who speak for us in parliament have bungalows in
+            Lutyens while our youth have no jobs. Maulanas who endorse parties
+            get nothing in writing. Local dons who deliver Muslim votes like
+            cattle pocket the reward. The exploitation isn't only external. Our
+            community deserves elected representatives accountable to outcomes,
+            not identity performance.
+          </div>
+        </div>
+        <div class="why-card r r3" data-n="03">
+          <div class="why-icon">📜</div>
+          <div class="why-title">Rights on <em>Paper Only</em></div>
+          <div class="why-body">
+            The Indian Constitution guarantees equal citizenship, freedom of
+            religion, and due process. These rights exist. Their enforcement
+            does not. Political prisoners rot under UAPA. Bulldozers demolish
+            without court orders. NRC threatens citizenship based on paperwork
+            poverty can't fix. The law says one thing. The state does another.
+            We demand alignment.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANIFESTO -->
+    <section class="manifesto-sec" id="manifesto">
+      <div class="sec-label r">The Manifesto</div>
+      <h2 class="sec-title r">Eight Demands.<br />No Compromise.</h2>
+      <p class="manifesto-lead r">
+        These are not appeals. These are constitutional rights being demanded by
+        Indian citizens who pay taxes, vote, fight wars, win medals, and build
+        this nation — and are owed this by law.
+      </p>
+
+      <div>
+        <div class="m-item r">
+          <div class="m-num">01</div>
+          <div>
+            <span class="m-tag red">Political Prisoners</span>
+            <div class="m-title-row">
+              <div class="m-title">
+                Release Muslims Jailed Under UAPA Without Trial
+              </div>
+              <span class="m-article">Art. 21 & 22</span>
+            </div>
+            <p class="m-body">
+              Hundreds of Indian Muslims — students, journalists, activists —
+              are imprisoned under UAPA for years without bail, charge sheet, or
+              trial. We demand: time-bound trials within 90 days, immediate bail
+              review for undertrial prisoners jailed beyond 2 years, and an
+              independent audit of all UAPA cases filed after 2019. No Indian
+              should be a political prisoner.
+            </p>
+          </div>
+        </div>
+        <div class="m-item r">
+          <div class="m-num">02</div>
+          <div>
+            <span class="m-tag orange">Citizenship Rights</span>
+            <div class="m-title-row">
+              <div class="m-title">
+                NRC & CAA Must Not Create Second-Class Citizens
+              </div>
+              <span class="m-article">Art. 14 & 15</span>
+            </div>
+            <p class="m-body">
+              The CAA-NRC combination is constitutionally dangerous. It makes
+              religion a criterion for citizenship for the first time in
+              independent India. We demand: complete rollback of NRC, judicial
+              review of CAA's religious discrimination, and a guarantee that no
+              Indian Muslim — regardless of documentation gaps caused by poverty
+              or displacement — shall be rendered stateless.
+            </p>
+          </div>
+        </div>
+        <div class="m-item r">
+          <div class="m-num">03</div>
+          <div>
+            <span class="m-tag gold">Voting Rights</span>
+            <div class="m-title-row">
+              <div class="m-title">
+                Protect Every Muslim Vote — Deletions Are Disenfranchisement
+              </div>
+              <span class="m-article">Art. 326</span>
+            </div>
+            <p class="m-body">
+              Systematic deletion of Muslim names from voter rolls is documented
+              across multiple states. This is the silent undoing of democracy.
+              We demand: any Election Commissioner found complicit in voter list
+              manipulation faces prosecution under UAPA — as the Cockroach Janta
+              Party demands. Taking away a vote is no less than electoral
+              terrorism. We stand by that framing.
+            </p>
+          </div>
+        </div>
+        <div class="m-item r">
+          <div class="m-num">04</div>
+          <div>
+            <span class="m-tag blue">Anti-Bulldozer</span>
+            <div class="m-title-row">
+              <div class="m-title">
+                Demolitions Without Due Process Are Illegal — Full Stop
+              </div>
+              <span class="m-article">Art. 21</span>
+            </div>
+            <p class="m-body">
+              "Bulldozer justice" — demolishing homes of accused individuals
+              disproportionately in Muslim neighbourhoods — is extrajudicial
+              punishment violating the right to life and Supreme Court
+              precedent. We demand: mandatory court orders before any
+              demolition, immediate rehabilitation for those whose properties
+              were illegally razed, and criminal prosecution of officials who
+              ordered unconstitutional demolitions.
+            </p>
+          </div>
+        </div>
+        <div class="m-item r">
+          <div class="m-num">05</div>
+          <div>
+            <span class="m-tag green">Education & Economy</span>
+            <div class="m-title-row">
+              <div class="m-title">
+                Empowerment, Not Appeasement — Education Is the Demand
+              </div>
+              <span class="m-article">Art. 21A & 29</span>
+            </div>
+            <p class="m-body">
+              Muslim India has one of the lowest literacy rates, lowest
+              government employment, and lowest access to formal banking —
+              confirmed by the Sachar Committee in 2006, unchanged in 2026. We
+              demand: Muslim representation in IITs, IIMs, and central
+              universities proportional to population; skill development centres
+              in Muslim-majority districts; Aligarh Muslim University's minority
+              status restored; and an audit of Waqf properties to fund
+              education, not politics.
+            </p>
+          </div>
+        </div>
+        <div class="m-item r">
+          <div class="m-num">06</div>
+          <div>
+            <span class="m-tag red">Anti-Gundagiri</span>
+            <div class="m-title-row">
+              <div class="m-title">
+                Expose & Remove Muslim Political Dons Who Exploit the Community
+              </div>
+            </div>
+            <p class="m-body">
+              We name the problem: Muslim politicians across parties who
+              monetise community fear, deliver votes as a commodity, incite
+              communal tension for relevance, and suppress genuine civic voices
+              in exchange for personal benefit. We demand: internal audits of
+              Muslim legislators' work, public pledges on deliverables signed
+              before every election, and a social boycott of leaders who have
+              held office for 10+ years without measurable outcomes.
+            </p>
+          </div>
+        </div>
+        <div class="m-item r">
+          <div class="m-num">07</div>
+          <div>
+            <span class="m-tag purple">Communal Justice</span>
+            <div class="m-title-row">
+              <div class="m-title">
+                End Impunity for Communal Violence Instigators
+              </div>
+              <span class="m-article">Art. 14</span>
+            </div>
+            <p class="m-body">
+              From Muzaffarnagar to Jahangirpuri — perpetrators of mob violence
+              and political hate speech walk free while victims are jailed. We
+              demand a Special Fast Track Court mechanism exclusively for
+              communal violence cases, with mandatory prosecution of instigators
+              regardless of political affiliation. Equal protection under law is
+              not a privilege. It is a constitutional guarantee.
+            </p>
+          </div>
+        </div>
+        <div class="m-item r">
+          <div class="m-num">08</div>
+          <div>
+            <span class="m-tag green">No More Vote Bank</span>
+            <div class="m-title-row">
+              <div class="m-title">
+                Indian Muslims Will Vote on Development — Not Fear
+              </div>
+            </div>
+            <p class="m-body">
+              We formally declare: this community will no longer vote as a bloc
+              out of fear of the other side. Every party that wants Muslim votes
+              must publish a written development manifesto for Muslim
+              constituencies — on education, employment, housing, and legal
+              protection. We will publish a community scorecard before every
+              election. No deliverables. No votes. Full stop.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE 2 -->
+    <div class="marquee-band dark">
+      <div class="mq-track rev">
+        <span>MUTTAHIDA COCKROACH FRONT</span><span>متحدہ کاکروچ فرنٹ</span
+        ><span>MUSLIM EMPOWERMENT · INDIAN PRIDE</span
+        ><span>CONSTITUTION IS OUR MANIFESTO</span
+        ><span>EDUCATION NOT EXPLOITATION</span
+        ><span>MUTTAHIDA COCKROACH FRONT</span><span>متحدہ کاکروچ فرنٹ</span
+        ><span>MUSLIM EMPOWERMENT · INDIAN PRIDE</span
+        ><span>CONSTITUTION IS OUR MANIFESTO</span
+        ><span>EDUCATION NOT EXPLOITATION</span>
+      </div>
+    </div>
+
+    <!-- VOTEBANK QUOTE -->
+    <section class="votebank-sec" id="votebank">
+      <div class="sec-label r">The Political Reality</div>
+      <h2 class="sec-title r">
+        They count us.<br />They don't<br />account to us.
+      </h2>
+      <blockquote class="vb-quote r">
+        "Every party has a Muslim face.<br />Very few have a Muslim
+        <em>plan</em>."
+      </blockquote>
+      <p class="vb-body r">
+        From Congress to Samajwadi to AAP — every party courts Muslim votes with
+        the promise of protection from the BJP. Protection is not governance.
+        Fear is not policy. We refuse to be the community that "lesser evil"
+        politics is designed for. We demand to be stakeholders, not shields.
+      </p>
+      <div class="vb-pills r">
+        <span class="pill">Anti-Appeasement</span>
+        <span class="pill">Pro-Constitution</span>
+        <span class="pill">Development Not Donations</span>
+        <span class="pill">Accountability Not Alignment</span>
+        <span class="pill">India First</span>
+      </div>
+    </section>
+
+    <!-- EXPOSE -->
+    <section class="expose-sec" id="expose">
+      <div class="sec-label r">The Expose</div>
+      <h2 class="sec-title r">We Name<br />the Game.</h2>
+      <div class="expose-grid">
+        <div class="expose-card r">
+          <h4>"Secular" Party Machine</h4>
+          <p>
+            70 years of taking Muslim votes as guaranteed. Zero accountability
+            on Sachar Committee recommendations. Community leaders on party
+            payrolls who suppress independent Muslim political voice in exchange
+            for personal benefit. Tokenism over real policy. We see you — and we
+            are documenting every unfulfilled promise.
+          </p>
+        </div>
+        <div class="expose-card r r2">
+          <h4>Right-Wing Polarisation</h4>
+          <p>
+            Using Indian Muslims as an election-season punching bag. Bulldozer
+            politics targeting homes without judicial orders. Hate speech from
+            stages that becomes mob violence in streets. Conflating religion
+            with anti-nationalism to keep minorities on permanent defensive.
+            Equal citizenship exists in the Constitution. Demand its
+            enforcement.
+          </p>
+        </div>
+        <div class="expose-card r">
+          <h4>Internal Political Gundas</h4>
+          <p>
+            Community "leaders" who sell votes to the highest bidder. Who
+            discourage education in favour of dependency. Who settle personal
+            scores by calling rivals anti-Islamic. Who have made "Muslim
+            politics" mean corruption, not progress. You are the first wall we
+            must tear down. We will publicly name outcomes — not names.
+          </p>
+        </div>
+        <div class="expose-card r r2">
+          <h4>Godi Media Complicity</h4>
+          <p>
+            Prime-time debates designed to otherize Muslims. "Whataboutery" that
+            redirects every legitimate demand into a communal argument. Media
+            houses whose ownership structure decides which riots get covered and
+            which don't. We stand with CJP's demand: all Ambani-Adani media
+            licences must face independent scrutiny.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CJP SOLIDARITY -->
+    <section class="cjp-sec" id="cjp">
+      <div class="sec-label">CJP Alliance</div>
+      <span class="cjp-roaches r">🪳🪳🪳🪳🪳</span>
+      <h2 class="cjp-title r">
+        We Formally Join the<br /><em>Cockroach Janta Party.</em>
+      </h2>
+      <p class="cjp-body r">
+        When the Chief Justice of India called young Indians "cockroaches," the
+        nation's youth didn't flinch. They wore it as a badge of honour. We —
+        Indian Muslims who have been called far worse, for far longer —
+        recognise this movement as our own.<br /><br />The Cockroach Janta Party
+        stands for the forgotten, the dismissed, and the deliberately sidelined.
+        That is us. The Muttahida Cockroach Front formally declares solidarity
+        with and membership in the Cockroach Janta Party — adding Muslim
+        empowerment to its swarm of demands.<br /><br /><strong
+          style="color: var(--saffron-light)"
+          >We cannot be stepped on. We keep coming back. Together, we
+          survive.</strong
+        >
+      </p>
+      <div class="cjp-declaration r">
+        🪳 MUTTAHIDA COCKROACH FRONT · OFFICIALLY PART OF CJP · 2026 🪳
+      </div>
+      <br />
+      <a
+        class="cjp-link r"
+        href="https://cockroachjantaparty.org"
+        target="_blank"
+        rel="noopener"
+        >Visit Cockroach Janta Party →</a
+      >
+    </section>
+
+    <!-- CAP / IDENTITY -->
+    <section class="cap-sec" id="identity">
+      <div class="sec-label r">Our Symbol</div>
+      <h2 class="sec-title r">The Cockroach<br />Muslim Cap.</h2>
+      <div class="cap-layout">
+        <div class="cap-visual r">
+          <svg
+            width="240"
+            height="200"
+            viewBox="0 0 240 200"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- cap dome -->
+            <path
+              d="M30 140 Q30 50 120 44 Q210 50 210 140 Z"
+              fill="white"
+              stroke="#333"
+              stroke-width="2.5"
+            />
+            <!-- cap brim/base ellipse -->
+            <ellipse
+              cx="120"
+              cy="140"
+              rx="90"
+              ry="20"
+              fill="white"
+              stroke="#333"
+              stroke-width="2.5"
+            />
+            <!-- inside of brim shadow -->
+            <ellipse cx="120" cy="140" rx="88" ry="18" fill="#eee" />
+            <!-- tricolor band -->
+            <path
+              d="M33 118 Q33 105 120 102 Q207 105 207 118"
+              stroke="#FF6B00"
+              stroke-width="5"
+              fill="none"
+              stroke-linecap="round"
+            />
+            <path
+              d="M33 128 Q33 115 120 112 Q207 115 207 128"
+              stroke="#1A5C38"
+              stroke-width="4"
+              fill="none"
+              stroke-linecap="round"
+            />
+            <!-- cockroach badge circle on front -->
+            <circle
+              cx="120"
+              cy="90"
+              r="26"
+              fill="#0D0D0D"
+              stroke="#FF6B00"
+              stroke-width="2.5"
+            />
+            <!-- mini cockroach in badge -->
+            <ellipse cx="120" cy="95" rx="9" ry="11" fill="#5C3D28" />
+            <ellipse cx="120" cy="84" rx="7" ry="6" fill="#6B4830" />
+            <line
+              x1="116"
+              y1="80"
+              x2="108"
+              y2="72"
+              stroke="#5C3D28"
+              stroke-width="1.3"
+            />
+            <line
+              x1="124"
+              y1="80"
+              x2="132"
+              y2="72"
+              stroke="#5C3D28"
+              stroke-width="1.3"
+            />
+            <line
+              x1="112"
+              y1="90"
+              x2="103"
+              y2="85"
+              stroke="#5C3D28"
+              stroke-width="1.2"
+            />
+            <line
+              x1="128"
+              y1="90"
+              x2="137"
+              y2="85"
+              stroke="#5C3D28"
+              stroke-width="1.2"
+            />
+            <!-- mini taqiyah on badge cockroach -->
+            <ellipse cx="120" cy="81" rx="7.5" ry="3" fill="white" />
+            <path d="M113 81 Q113 76 120 75.5 Q127 76 127 81 Z" fill="white" />
+            <path
+              d="M113.5 80 Q113.5 77.5 120 77 Q126.5 77.5 126.5 80"
+              stroke="#FF6B00"
+              stroke-width=".9"
+              fill="none"
+            />
+            <path
+              d="M113.5 81.2 Q113.5 78.7 120 78.2 Q126.5 78.7 126.5 81.2"
+              stroke="#1A5C38"
+              stroke-width=".7"
+              fill="none"
+            />
+            <!-- crescent star on badge -->
+            <text
+              x="120"
+              y="107"
+              text-anchor="middle"
+              fill="#FF9933"
+              font-size="10"
+              font-family="serif"
+            >
+              ☽★
+            </text>
+            <!-- stitching lines on cap dome -->
+            <path
+              d="M76 90 Q120 74 164 90"
+              stroke="#ddd"
+              stroke-width="1"
+              stroke-dasharray="4,5"
+              fill="none"
+            />
+            <path
+              d="M58 110 Q120 92 182 110"
+              stroke="#ddd"
+              stroke-width="1"
+              stroke-dasharray="4,5"
+              fill="none"
+            />
+            <!-- INDIA text on brim -->
+            <text
+              x="120"
+              y="146"
+              text-anchor="middle"
+              fill="#555"
+              font-size="11"
+              font-family="'Space Mono',monospace"
+              font-weight="700"
+              letter-spacing="6"
+            >
+              INDIA
+            </text>
+          </svg>
+        </div>
+        <div class="r">
+          <p class="cap-desc">
+            The taqiyah has always been a marker of identity worn with dignity.
+            This version adds one more layer: a tricolor cockroach emblem at the
+            forehead. You are Muslim and Indian — not despite each other, but
+            because of both. When you wear it you are saying: I am not
+            apologising for existing. I am a citizen. I have rights. I will not
+            be stepped on.
+          </p>
+          <ul class="cap-features">
+            <li>Traditional taqiyah form, modernised construction</li>
+            <li>Cockroach emblem embroidered in tricolor thread</li>
+            <li>Crescent-and-star motif retained with full dignity</li>
+            <li>100% produced by local Muslim artisan craftsmen</li>
+            <li>Designed for street awareness, rallies, and solidarity</li>
+            <li>A public declaration — not a quiet private whisper</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ELIGIBILITY -->
+    <section class="elig-sec" id="eligibility">
+      <div class="sec-label r">Membership</div>
+      <h2 class="sec-title r">Are You<br />Eligible?</h2>
+      <p
+        style="
+          font-size: 14px;
+          color: var(--mid);
+          margin-bottom: 8px;
+          line-height: 1.85;
+          max-width: 580px;
+        "
+        class="r"
+      >
+        We check zero boxes on sect, language, or state. No fees. No selfies
+        with the leader. No missed call to register. If you believe in the
+        Indian Constitution and Muslim empowerment without appeasement — you're
+        in.
+      </p>
+      <div class="req-grid">
+        <div class="req-card r">
+          <div class="req-check">✓</div>
+          <div class="req-num">REQ / 01</div>
+          <div class="req-title">Indian Citizen</div>
+          <div class="req-body">
+            You hold or believe in Indian citizenship as a constitutional right
+            — not a favour from any government. Article 5 onwards. Sunni, Shia,
+            Sufi, Bohra, Pasmanda — sect irrelevant. Country is the credential.
+          </div>
+        </div>
+        <div class="req-card r r2">
+          <div class="req-check">✓</div>
+          <div class="req-num">REQ / 02</div>
+          <div class="req-title">Done With Vote-Bank Politics</div>
+          <div class="req-body">
+            You have voted out of fear at least once. You are tired of it. You
+            want to vote for a government, not against a ghost. You understand
+            the difference between a protector and a patron.
+          </div>
+        </div>
+        <div class="req-card r">
+          <div class="req-check">✓</div>
+          <div class="req-num">REQ / 03</div>
+          <div class="req-title">Constitutionally Literate</div>
+          <div class="req-body">
+            You know — or are willing to learn — what Articles 14, 15, 21, 22,
+            25, 29, and 30 say. These are your weapons. The Constitution is not
+            a document to be proud of. It is a tool to be used.
+          </div>
+        </div>
+        <div class="req-card r r2">
+          <div class="req-check">✓</div>
+          <div class="req-num">REQ / 04</div>
+          <div class="req-title">Chronically Online & Loud</div>
+          <div class="req-body">
+            Minimum 11 hours a day preferred. You have strong opinions about
+            things that matter. You know the difference between a rant and a
+            resistance. Your keyboard is a polling booth that never closes.
+          </div>
+        </div>
+      </div>
+      <p class="elig-note r">
+        Membership is free, lifelong, and revocable only by you. No fees. No
+        party hierarchy. No missed call to register.
+      </p>
+    </section>
+
+    <!-- JOIN FORM -->
+    <section class="join-sec" id="join">
+      <div class="join-layout">
+        <div>
+          <div class="sec-label r">Join the Movement</div>
+          <h2 class="sec-title r">Register.<br />Resist.<br />Rebuild.</h2>
+          <p class="join-body r">
+            This is a register — not a database sold to anyone. Your name here
+            says: I refuse to be a vote bank. I demand my constitutional rights.
+            I am Indian and Muslim and neither identity apologises for the
+            other.
+          </p>
+          <div class="join-pledge r">
+            "I refuse to be a vote bank. I demand constitutional rights. I
+            reject appeasement and exploitation from every direction. I am
+            Indian and Muslim — and neither identity apologises for the other."
+          </div>
+          <div class="join-alliance r">
+            <span>🪳</span>
+            <div class="join-alliance-txt">
+              <strong>Also Joining: Cockroach Janta Party</strong>
+              <small>cockroachjantaparty.org · Est. 2026</small>
+            </div>
+          </div>
+        </div>
+        <div class="join-box r">
+          <div class="join-box-title">Join the Muttahida Cockroach Front</div>
+          <div class="join-box-sub">
+            मुत्तहिदा कॉकरोच फ्रंट में शामिल हों · Takes 60 seconds
+          </div>
+          <div class="fg">
+            <label>Your Full Name</label>
+            <input
+              type="text"
+              id="f-name"
+              placeholder="Mohammed / Priya / Ranjeet — all welcome"
+            />
+          </div>
+          <div class="fg">
+            <label>State / City</label>
+            <input
+              type="text"
+              id="f-city"
+              placeholder="Mumbai / Hyderabad / Lucknow / Chandigarh…"
+            />
+          </div>
+          <div class="fg">
+            <label>Email (optional — for updates only)</label>
+            <input
+              type="email"
+              id="f-email"
+              placeholder="stays with us, never sold"
+            />
+          </div>
+          <div class="fg">
+            <label>WhatsApp / Contact</label>
+            <input type="tel" id="f-phone" placeholder="+91 XXXXX XXXXX" />
+          </div>
+          <div class="fg">
+            <label>What angers you most?</label>
+            <select id="f-issue">
+              <option value="">Select the biggest issue</option>
+              <option>Political prisoners & UAPA abuse</option>
+              <option>Vote bank exploitation</option>
+              <option>NRC / CAA citizenship threat</option>
+              <option>Illegal demolitions</option>
+              <option>Lack of education & economic access</option>
+              <option>Muslim political gundas in our own community</option>
+              <option>Voter list deletions & disenfranchisement</option>
+              <option>All of the above, honestly</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Your message (optional — we read everything)</label>
+            <textarea
+              id="f-msg"
+              placeholder="A rant, a demand, a story. Say what you've been wanting to say…"
+            ></textarea>
+          </div>
+          <div class="chk-row">
+            <input type="checkbox" id="f-agree" />
+            <label for="f-agree"
+              >I understand this movement stands for constitutional rights and
+              Indian pride — not religious extremism. I am an Indian citizen
+              demanding dignity under the law.</label
+            >
+          </div>
+          <button class="submit-btn" onclick="handleJoin()">
+            🪳 JOIN THE FRONT →
+          </button>
+          <div class="success-msg" id="success-msg">
+            ✓ WELCOME TO THE MUTTAHIDA COCKROACH FRONT.<br />YOU'VE BEEN COUNTED
+            — UNLIKE BY MOST PARTIES.<br />Share this page. Grow the swarm.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-top">
+        <div>
+          <div class="fb-name">Muttahida Cockroach Front</div>
+          <div class="fb-sub">मुत्तहिदा कॉकरोच फ्रंट · Est. 2026</div>
+          <div class="fb-body">
+            A Muslim empowerment movement grounded in the Indian Constitution.
+            No appeasement. No vote bank politics. No apologies for existing. An
+            official wing of the Cockroach Janta Party.
+          </div>
+          <p class="fb-urdu">
+            متحدہ کاکروچ فرنٹ · مسلم بااختیار بنانا · ہندوستانی فخر
+          </p>
+          <div class="footer-flag">
+            <span class="ff1"></span><span class="ff2"></span
+            ><span class="ff3"></span>
+          </div>
+        </div>
+        <div>
+          <div class="fc-title">The Movement</div>
+          <ul class="footer-links">
+            <li><a href="#why">Why This Exists</a></li>
+            <li><a href="#manifesto">The Manifesto</a></li>
+            <li><a href="#votebank">Vote Bank Problem</a></li>
+            <li><a href="#expose">The Expose</a></li>
+            <li><a href="#cjp">CJP Alliance</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="fc-title">Get Involved</div>
+          <ul class="footer-links">
+            <li><a href="#eligibility">Eligibility</a></li>
+            <li><a href="#join">Join the Front</a></li>
+            <li><a href="#identity">The Cap</a></li>
+            <li>
+              <a
+                href="https://cockroachjantaparty.org"
+                target="_blank"
+                rel="noopener"
+                >Cockroach Janta Party →</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div class="fc-title">Connect</div>
+          <ul class="footer-links">
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Telegram</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="mailto:contact@cockroachjantaparty.org">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span
+          >© 2026 Muttahida Cockroach Front · मुत्तहिदा कॉकरोच फ्रंट ·
+          Headquartered wherever the wifi works.</span
+        >
+        <span>Constitutionally Indian. Unapologetically Muslim. 🪳</span>
+      </div>
+    </footer>
+
+    <script>
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("v");
+          });
+        },
+        { threshold: 0.08 },
+      );
+      document.querySelectorAll(".r").forEach((el) => obs.observe(el));
+
+      function handleJoin() {
+        const name = document.getElementById("f-name").value.trim();
+        const agree = document.getElementById("f-agree").checked;
+        if (!name) {
+          alert("Please enter your name.");
+          return;
+        }
+        if (!agree) {
+          alert("Please check the declaration to proceed.");
+          return;
+        }
+        const btn = document.querySelector(".submit-btn");
+        const msg = document.getElementById("success-msg");
+        btn.textContent = "✓ REGISTERED — WELCOME TO THE FRONT";
+        btn.style.background = "#1A5C38";
+        btn.style.color = "white";
+        btn.style.boxShadow = "none";
+        msg.style.display = "block";
+      }
+    </script>
+  </body>
+</html>
