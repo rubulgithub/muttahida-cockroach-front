@@ -2251,99 +2251,149 @@
     </section>
 
     <!-- JOIN FORM -->
-    <section class="join-sec" id="join">
-      <div class="join-layout">
+    <section style="background: var(--saffron)" id="join">
+      <div class="join-inner">
         <div>
-          <div class="sec-label r">Join the Movement</div>
-          <h2 class="sec-title r">Register.<br />Resist.<br />Rebuild.</h2>
-          <p class="join-body r">
-            This is a register — not a database sold to anyone. Your name here
-            says: I refuse to be a vote bank. I demand my constitutional rights.
-            I am Indian and Muslim and neither identity apologises for the
-            other.
-          </p>
-          <div class="join-pledge r">
-            "I refuse to be a vote bank. I demand constitutional rights. I
-            reject appeasement and exploitation from every direction. I am
-            Indian and Muslim — and neither identity apologises for the other."
+          <div class="section-label reveal" style="color: var(--dark)">
+            Join the Movement
           </div>
-          <div class="join-alliance r">
-            <span>🪳</span>
-            <div class="join-alliance-txt">
-              <strong>Also Joining: Cockroach Janta Party</strong>
-              <small>cockroachjantaparty.org · Est. 2026</small>
+          <h2 class="section-title reveal" style="color: var(--dark)">
+            Register.<br />Resist.<br />Rebuild.
+          </h2>
+          <p class="join-body reveal">
+            This is a register — not a database sold to anyone. Your name here
+            says:
+            <em
+              >I refuse to be a vote bank. I demand my constitutional rights. I
+              am Indian and Muslim and neither identity apologises for the
+              other.</em
+            >
+          </p>
+          <div style="margin-top: 24px" class="reveal">
+            <div
+              style="
+                font-size: 11px;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                font-weight: 700;
+                margin-bottom: 8px;
+                color: var(--dark);
+              "
+            >
+              Also Joining:
+            </div>
+            <div
+              style="
+                padding: 14px 20px;
+                background: var(--dark);
+                display: inline-flex;
+                align-items: center;
+                gap: 12px;
+              "
+            >
+              <span style="font-size: 28px">🪳</span>
+              <div>
+                <div
+                  style="
+                    font-family: &quot;Playfair Display&quot;, serif;
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: var(--saffron);
+                  "
+                >
+                  Cockroach Janta Party
+                </div>
+                <div
+                  style="font-size: 10px; color: #aaa; letter-spacing: 0.1em"
+                >
+                  cockroachjantaparty.org
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="join-box r">
+
+        <div class="join-box reveal">
           <div class="join-box-title">Join the Muttahida Cockroach Front</div>
           <div class="join-box-sub">
             मुत्तहिदा कॉकरोच फ्रंट में शामिल हों · Takes 60 seconds
           </div>
-          <div class="fg">
-            <label>Your Full Name</label>
-            <input
-              type="text"
-              id="f-name"
-              placeholder="Mohammed / Priya / Ranjeet — all welcome"
-            />
-          </div>
-          <div class="fg">
-            <label>State / City</label>
-            <input
-              type="text"
-              id="f-city"
-              placeholder="Mumbai / Hyderabad / Lucknow / Chandigarh…"
-            />
-          </div>
-          <div class="fg">
-            <label>Email (optional — for updates only)</label>
-            <input
-              type="email"
-              id="f-email"
-              placeholder="stays with us, never sold"
-            />
-          </div>
-          <div class="fg">
-            <label>WhatsApp / Contact</label>
-            <input type="tel" id="f-phone" placeholder="+91 XXXXX XXXXX" />
-          </div>
-          <div class="fg">
-            <label>What angers you most?</label>
-            <select id="f-issue">
-              <option value="">Select the biggest issue</option>
-              <option>Political prisoners & UAPA abuse</option>
-              <option>Vote bank exploitation</option>
-              <option>NRC / CAA citizenship threat</option>
-              <option>Illegal demolitions</option>
-              <option>Lack of education & economic access</option>
-              <option>Muslim political gundas in our own community</option>
-              <option>Voter list deletions & disenfranchisement</option>
-              <option>All of the above, honestly</option>
-            </select>
-          </div>
-          <div class="fg">
-            <label>Your message (optional — we read everything)</label>
-            <textarea
-              id="f-msg"
-              placeholder="A rant, a demand, a story. Say what you've been wanting to say…"
-            ></textarea>
-          </div>
-          <div class="chk-row">
-            <input type="checkbox" id="f-agree" />
-            <label for="f-agree"
-              >I understand this movement stands for constitutional rights and
-              Indian pride — not religious extremism. I am an Indian citizen
-              demanding dignity under the law.</label
-            >
-          </div>
-          <button class="submit-btn" onclick="handleJoin()">
-            🪳 JOIN THE FRONT →
-          </button>
-          <div class="success-msg" id="success-msg">
-            ✓ WELCOME TO THE MUTTAHIDA COCKROACH FRONT.<br />YOU'VE BEEN COUNTED
-            — UNLIKE BY MOST PARTIES.<br />Share this page. Grow the swarm.
-          </div>
+
+          <form
+            name="mcf-join"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            onsubmit="handleJoin(event)"
+          >
+            <!-- Honeypot — hidden spam trap -->
+            <p style="display: none">
+              <input name="bot-field" />
+            </p>
+
+            <div class="form-group">
+              <label>Your Full Name</label>
+              <input
+                type="text"
+                name="name"
+                required
+                placeholder="Mohammed / Priya / Ranjeet — all welcome"
+              />
+            </div>
+            <div class="form-group">
+              <label>State / City</label>
+              <input
+                type="text"
+                name="city"
+                required
+                placeholder="Mumbai / Hyderabad / Lucknow…"
+              />
+            </div>
+            <div class="form-group">
+              <label>Email (optional — for updates)</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="stays with us, never sold"
+              />
+            </div>
+            <div class="form-group">
+              <label>What angers you most?</label>
+              <select name="issue">
+                <option value="">Select the biggest issue</option>
+                <option>Political prisoners & UAPA abuse</option>
+                <option>Vote bank exploitation</option>
+                <option>NRC / CAA citizenship threat</option>
+                <option>Illegal demolitions</option>
+                <option>Lack of education access</option>
+                <option>Muslim political gundas in our own community</option>
+                <option>All of the above, honestly</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Your message (optional)</label>
+              <textarea
+                name="message"
+                placeholder="Say what you've been wanting to say…"
+              ></textarea>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" id="f-agree" required />
+              <label for="f-agree"
+                >I understand this movement stands for constitutional rights,
+                not religious extremism. I am Indian first, and demand dignity
+                as an Indian citizen.</label
+              >
+            </div>
+
+            <button type="submit" class="submit-btn" id="submit-btn">
+              🪳 JOIN THE FRONT →
+            </button>
+            <div class="success-msg" id="success-msg">
+              ✓ WELCOME TO THE MUTTAHIDA COCKROACH FRONT. YOU'VE BEEN COUNTED —
+              UNLIKE BY MOST PARTIES.
+            </div>
+          </form>
         </div>
       </div>
     </section>
